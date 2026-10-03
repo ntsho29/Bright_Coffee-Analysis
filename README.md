@@ -8,18 +8,6 @@ This project analyses Bright Coffee Shop sales data to uncover sales patterns, p
 
 The project focuses on transforming raw transactional data into a cleaned analytical dataset and using SQL, Excel, and data visualisation tools to generate actionable business insights.
 
-The analysis answers key business questions such as:
-
-- Which products generate the most revenue?
-- Which products sell the highest number of units?
-- What times of day generate the most sales?
-- Which product types perform best?
-- How do sales differ between weekdays and weekends?
-- What sales trends can be identified?
-- Which areas of the business could benefit from targeted promotions or improved stock planning?
-
----
-
 ## 🎯 Business Objective
 
 The objective of this project is to help Bright Coffee Shop understand its sales performance and make data-driven decisions.
@@ -36,54 +24,93 @@ The analysis focuses on:
 - Developing business recommendations based on the findings
 
 ---
+# ☕ Bright Coffee Shop Sales Analysis
 
-## 🗂️ Dataset
+## 📊 Project Overview
 
-The dataset contains transactional sales information from Bright Coffee Shop.
+This project analyses Bright Coffee Shop's transactional sales data to identify sales trends, product performance, revenue patterns and peak sales periods.
 
-Key fields include:
+The goal was to transform raw sales data into actionable business insights using SQL, data visualisation and dashboards.
 
-| Field | Description |
-|---|---|
-| `transaction_id` | Unique identifier for each transaction |
-| `transaction_date` | Date of the transaction |
-| `time_of_day` | Time at which the transaction occurred |
-| `transaction_qty` | Number of items sold |
-| `store_id` | Store identifier |
-| `product_id` | Product identifier |
-| `product_type` | Type/category of product sold |
-| `product_detail` | Specific product sold |
-| `unit_price` | Price per unit |
-| `total_amount` | Total transaction value |
-| `Day_Name` | Day of the week |
-| `Month_Name` | Month of the transaction |
-| `Transaction_Year` | Year of the transaction |
-| `Hour_of_the_Day` | Hour extracted from the transaction time |
-| `Day_Classification` | Weekday or Weekend |
-| `Time_Bucket` | Three-hour sales interval |
-| `Time_Period` | Human-readable period such as Morning, Afternoon or Evening |
+## 🛠️ Tools Used
 
----
+- **Databricks & SQL** – Data cleaning and transformation
+- **Excel** – Pivot tables and exploratory analysis
+- **Power BI** – Interactive dashboard
+- **Looker Studio** – Data visualisation
+- **Lovable** – Interactive dashboard
 
-## 🧹 Data Cleaning & Transformation
+## 🧹 Data Preparation
 
-The raw sales data was cleaned and transformed using SQL in Databricks.
+The raw dataset was cleaned and transformed using SQL.
 
 Key transformations included:
 
-- Standardising the `unit_price` field
-- Converting comma-based decimal values into standard decimal values
-- Calculating total transaction revenue
-- Extracting the day of the week
-- Extracting the month
-- Extracting the transaction year
-- Extracting the hour of the transaction
-- Classifying transactions as Weekday or Weekend
-- Creating three-hour sales time buckets
-- Creating broader time-period classifications
+- Standardising unit prices
+- Calculating `total_amount`
+- Extracting day, month, year and hour
+- Creating weekday/weekend classifications
+- Creating time-based sales buckets
 
-### Revenue Calculation
+**Total Amount = Unit Price × Transaction Quantity**
 
-```text
-Total Amount = Unit Price × Transaction Quantity
+## 📈 Key KPIs
+
+| KPI | Result |
+|---|---:|
+| Total Revenue | R698,812.33 |
+| Total Units Sold | 214,470 |
+| Total Transactions | 149,116 |
+| Average Transaction Value | R4.69 |
+
+---
+
+## 🔎 Key Insights
+
+- **Top revenue-generating product:** Sustainably Grown Organic Lg — R21,151.75
+- **Best-selling product:** Earl Grey Rg — 4,708 units
+- **Top product type by revenue:** Barista Espresso — R91,406.20
+- **Peak sales period:** 09:00–11:59 — R220,162.06
+- **Highest-performing month:** June — R166,485.88
+- **Highest-performing day:** Monday — R101,677.28
+- **Weekday revenue:** R503,587.54
+- **Weekend revenue:** R195,224.79
+
+---
+
+## 💡 Recommendations
+
+- Maintain sufficient stock of high-performing products during peak periods.
+- Align staffing and stock planning with morning demand.
+- Consider promotions during lower-performing periods.
+- Investigate differences between weekday and weekend performance.
+- Automate regular sales reporting for ongoing monitoring.
+
+---
+
+## 📊 Dashboards
+
+The analysis was visualised using:
+
+**Power BI | Looker Studio | Lovable | Excel**
+
+Dashboards include revenue KPIs, product performance, sales volume, time-based analysis and sales trends.
+
+---
+
+## 🚀 Future Improvements
+
+- Customer-level analysis
+- Multi-store performance analysis
+- Automated reporting
+- Sales forecasting
+- Customer loyalty analysis
+
+---
+
+## 👩🏽‍💻 Author
+
+**Ntshovelo Hlongwane**  
+Data Analytics Portfolio | BrightLearn | 2026
+
 
